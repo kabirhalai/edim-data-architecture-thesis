@@ -1,0 +1,21 @@
+name: 'edim'
+version: '1.0.0'
+profile: 'edim'
+
+model-paths: ["models"]
+seed-paths: ["seeds"]
+target-path: "target"
+clean-targets: ["target", "dbt_packages"]
+
+vars:
+  gppd_path: "../data/raw/wri/gppd/2026-07-27/*.parquet"
+  irena_path: "../data/raw/irenastat/country_eleccap/2026-07-27/*.parquet"
+
+models:
+  edim:
+    bronze:
+      +materialized: view
+    silver:
+      +materialized: table
+    gold:
+      +materialized: table

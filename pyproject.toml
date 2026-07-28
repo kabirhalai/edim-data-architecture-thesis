@@ -1,0 +1,18 @@
+[project]
+name = "thesis-pipeline"
+version = "0.1.0"
+description = "Add your description here"
+readme = "README.md"
+requires-python = ">=3.13"
+dependencies = [
+    "dbt>=1.0.0.40.18",
+    "dbt-core>=1.12.0",
+    "dbt-duckdb>=1.10.1",
+    "dlt>=1.29.1",
+    "openlineage-dbt>=1.52.0",
+    "openpyxl>=3.1.5",
+    "pandas>=3.0.5",
+    "pyarrow>=25.0.0",
+    "pymupdf>=1.28.0",
+    "requests>=2.34.2",
+]

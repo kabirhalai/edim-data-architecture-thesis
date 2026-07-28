@@ -1,0 +1,16 @@
+models:
+  - name: capacity
+    columns:
+      - name: technology
+        tests:
+          - not_null
+          - accepted_values:
+              values: ['Hydro','Solar','Gas','Oil','Wind','Nuclear','Coal',
+                       'Waste','Biomass','Wave and Tidal','Petcoke','Geothermal',
+                       'Storage','Cogeneration','Other']
+      - name: country_iso3
+        tests:
+          - not_null
+      - name: capacity_mw
+        tests:
+          - not_null
